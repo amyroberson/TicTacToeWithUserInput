@@ -11,6 +11,27 @@ import XCTest
 
 class EvaluateTests: XCTestCase {
 
-    
+    func testEvaluateYN(){
+        let result = evaluateYN(input: "y")
+        let expected = true
+        XCTAssertEqual(result, expected)
+    }
 
+    func testEvaluateYN1(){
+        let result = evaluateYN(input: "Y")
+        let expected = true
+        XCTAssertEqual(result, expected)
+    }
+    
+    func testEvaluateYN2(){
+        let result = evaluateYN(input: "n")
+        let expected = false
+        XCTAssertEqual(result, expected)
+    }
+    
+    func testEvaluateYN3(){
+        let result = evaluateYN(input: "N")
+        let expected = false
+        XCTAssertEqual(result, expected)
+    }
 }

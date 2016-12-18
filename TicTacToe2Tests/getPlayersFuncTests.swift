@@ -28,19 +28,5 @@ class getPlayersFuncTests: XCTestCase {
         XCTAssertEqual(playerX.name, playerName1)
         XCTAssertEqual(playerO.name, playerName2)
     }
-    
-    func testSettingPlayersNames(){
-        let players = setPlayerNames(input1: "You", input2: "Me")
-        let expected = 2
-        let result = players.count
-        XCTAssertEqual(expected, result)
-    }
-    
-    func testSettingPlayersNames1(){
-        let players = setPlayerNames(input1: "You", input2: "Me")
-        let expected = "You"
-        let result = players[0].name
-        XCTAssertEqual(expected, result)
-    }
 
 }

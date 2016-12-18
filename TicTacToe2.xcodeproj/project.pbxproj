@@ -15,9 +15,9 @@
 		E1043DDF1E031D19008C92EE /* getPlayersFuncTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1043DDE1E031D19008C92EE /* getPlayersFuncTests.swift */; };
 		E1043DE11E031F8E008C92EE /* EvaluateMovesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1043DE01E031F8E008C92EE /* EvaluateMovesTests.swift */; };
 		E1043DE31E0347FD008C92EE /* EvaluateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1043DE21E0347FD008C92EE /* EvaluateTests.swift */; };
-		E1043DE51E03483B008C92EE /* checkForWinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1043DE41E03483B008C92EE /* checkForWinTests.swift */; };
-		E1043DE71E034865008C92EE /* StartAgainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1043DE61E034865008C92EE /* StartAgainTests.swift */; };
 		E1043DE91E0429B2008C92EE /* MethodsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1043DE81E0429B2008C92EE /* MethodsTests.swift */; };
+		E10FEECB1E064054002C4004 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1043DDC1E02F456008C92EE /* Main.swift */; };
+		E10FEECD1E0640A6002C4004 /* FileInteractionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FEECC1E0640A6002C4004 /* FileInteractionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,9 +43,8 @@
 		E1043DDE1E031D19008C92EE /* getPlayersFuncTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getPlayersFuncTests.swift; sourceTree = "<group>"; };
 		E1043DE01E031F8E008C92EE /* EvaluateMovesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvaluateMovesTests.swift; sourceTree = "<group>"; };
 		E1043DE21E0347FD008C92EE /* EvaluateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvaluateTests.swift; sourceTree = "<group>"; };
-		E1043DE41E03483B008C92EE /* checkForWinTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = checkForWinTests.swift; sourceTree = "<group>"; };
-		E1043DE61E034865008C92EE /* StartAgainTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartAgainTests.swift; sourceTree = "<group>"; };
 		E1043DE81E0429B2008C92EE /* MethodsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MethodsTests.swift; path = ../MethodsTests.swift; sourceTree = "<group>"; };
+		E10FEECC1E0640A6002C4004 /* FileInteractionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileInteractionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,11 +101,10 @@
 				E1043DD11E02F40F008C92EE /* TicTacToe2Tests.swift */,
 				E1043DD31E02F40F008C92EE /* Info.plist */,
 				E1043DE21E0347FD008C92EE /* EvaluateTests.swift */,
-				E1043DE41E03483B008C92EE /* checkForWinTests.swift */,
-				E1043DE61E034865008C92EE /* StartAgainTests.swift */,
 				E1043DE01E031F8E008C92EE /* EvaluateMovesTests.swift */,
 				E1043DDE1E031D19008C92EE /* getPlayersFuncTests.swift */,
 				E1043DE81E0429B2008C92EE /* MethodsTests.swift */,
+				E10FEECC1E0640A6002C4004 /* FileInteractionTests.swift */,
 			);
 			path = TicTacToe2Tests;
 			sourceTree = "<group>";
@@ -168,7 +166,6 @@
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = N75G8FC36Y;
 						ProvisioningStyle = Automatic;
-						TestTargetID = E1043DBD1E02F40F008C92EE;
 					};
 				};
 			};
@@ -224,12 +221,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E10FEECD1E0640A6002C4004 /* FileInteractionTests.swift in Sources */,
 				E1043DE31E0347FD008C92EE /* EvaluateTests.swift in Sources */,
-				E1043DE71E034865008C92EE /* StartAgainTests.swift in Sources */,
 				E1043DE11E031F8E008C92EE /* EvaluateMovesTests.swift in Sources */,
 				E1043DD21E02F40F008C92EE /* TicTacToe2Tests.swift in Sources */,
-				E1043DE51E03483B008C92EE /* checkForWinTests.swift in Sources */,
 				E1043DE91E0429B2008C92EE /* MethodsTests.swift in Sources */,
+				E10FEECB1E064054002C4004 /* Main.swift in Sources */,
 				E1043DDF1E031D19008C92EE /* getPlayersFuncTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,7 +375,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = N75G8FC36Y;
 				INFOPLIST_FILE = TicTacToe2Tests/Info.plist;
@@ -386,7 +382,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.roberson.amy.TicTacToe2Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TicTacToe2.app/Contents/MacOS/TicTacToe2";
 			};
 			name = Debug;
 		};
@@ -394,7 +389,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = N75G8FC36Y;
 				INFOPLIST_FILE = TicTacToe2Tests/Info.plist;
@@ -402,7 +396,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.roberson.amy.TicTacToe2Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TicTacToe2.app/Contents/MacOS/TicTacToe2";
 			};
 			name = Release;
 		};
@@ -425,6 +418,7 @@
 				E1043DD81E02F40F008C92EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E1043DD91E02F40F008C92EE /* Build configuration list for PBXNativeTarget "TicTacToe2Tests" */ = {
 			isa = XCConfigurationList;
@@ -433,6 +427,7 @@
 				E1043DDB1E02F40F008C92EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -12,40 +12,33 @@ import XCTest
 class EvaluateMovesTests: XCTestCase {
 
     
-func testEvaluateMove(){
-        let x = Game()
-        let players = setPlayerNames(input1: "Me", input2: "you")
-        x.players.append(players[0])
-        x.players.append(players[1])
-        let result: Bool = x.evaluateandPlace(input: (x:1, y:1), currentPlayer: x.players[0])
-        let expected: Bool = true
-        XCTAssertEqual(expected, result)
+   func testEvaluateMove(){
+        let p1 = Player(name: "me", mark: .x)
+        let p2 = Player(name: "you", mark: .o)
+        let x = Game(player1:p1 ,player2:p2)
+    do{
+        let result: Bool = try x.evaluateandPlace(input: (x:1, y:1), currentPlayer: x.player1)
+        let expected = true
+        XCTAssertEqual(result, expected)
+    } catch {
+        XCTAssert(false, "Caught \(error)")
+        
     }
-    
-    func testEvaluateMove1(){
-        let x = Game()
-        let players = setPlayerNames(input1: "Me", input2: "you")
-        x.players.append(players[0])
-        x.players.append(players[1])
-        _ = x.evaluateandPlace(input: (x:1, y:1), currentPlayer: x.players[0])
-        let result: Bool = x.evaluateandPlace(input: (x:0, y:1), currentPlayer: x.players[0])
-        let expected: Bool = false
-        XCTAssertEqual(expected, result)
     }
-    
     
     func testEvaluateMove2(){
-        let x = Game()
-        let players = setPlayerNames(input1: "Me", input2: "you")
-        x.players.append(players[0])
-        x.players.append(players[1])
-        _ = x.evaluateandPlace(input: (x:1, y:1), currentPlayer: x.players[0])
-        let result: Bool = x.evaluateandPlace(input: (x:1, y:1), currentPlayer: x.players[1])
-        let expected: Bool = false
-        XCTAssertEqual(expected, result)
+        let p1 = Player(name: "me", mark: .x)
+        let p2 = Player(name: "you", mark: .o)
+        let x = Game(lastPlayed: .x, grid: [.x,.empty,.empty,.x,.empty,.empty,.o,.empty,.empty], player1: p1, player2: p2, gameOutCome: nil)
+        XCTAssertThrowsError(try x.evaluateandPlace(input: (x:0, y:0), currentPlayer: x.player1))
+        
     }
-    
-    
-    
-
+  
+    func testEvaluateMove3(){
+        let p1 = Player(name: "me", mark: .x)
+        let p2 = Player(name: "you", mark: .o)
+        let x = Game(lastPlayed: .o, grid: [.x,.empty,.empty,.x,.empty,.empty,.o,.empty,.empty], player1: p1, player2: p2, gameOutCome: nil)
+        XCTAssertThrowsError(try x.evaluateandPlace(input: (x:0, y:0), currentPlayer: x.player1))
+        
+    }
 }
